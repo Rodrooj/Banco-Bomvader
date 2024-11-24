@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CubicCurve controlX1="97.0" controlX2="42.85595703125" controlY1="-52.0" controlY2="116.0" endX="159.0" endY="59.0" fill="DODGERBLUE" layoutX="461.0" layoutY="191.0" startX="-285.0" startY="-185.0" stroke="BLACK" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="55.0" prefHeight="78.0" prefWidth="402.0" style="-fx-background-color: #1e90ff;" text="- Consultar Dados - Menu Funcionario -">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="MenuButton" blendMode="HARD_LIGHT" layoutX="22.0" layoutY="187.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="402.0" text="- Menu - Consultar Dados ">
+        <items>
+          <MenuItem fx:id="ConsultarConta" mnemonicParsing="false" text="Consultar Conta">
+               <graphic>
+                  <GridPane prefHeight="179.0" prefWidth="269.0" style="-fx-background-color: #1e90ff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="139.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="TipoDeContaLabel2" alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #1e90ff;" text="Tipo De Conta">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                        <TextField blendMode="HARD_LIGHT" promptText="Corrente Ou Poupança" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="9.0" promptText="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="28.0" promptText="Indetificar" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="44.0" promptText="Saldo Em Conta" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="62.0" promptText="Limite Disponivel" style="-fx-font: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="112.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="TipoDeContaLabel21" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="15.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #1e90ff;" text="Nome" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Label fx:id="TipoDeContaLabel211" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="38.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #1e90ff;" text="CPF" GridPane.rowIndex="2" />
+                        <Label fx:id="TipoDeContaLabel2111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #1e90ff;" text="Saldo" GridPane.rowIndex="3" />
+                        <Label fx:id="TipoDeContaLabel31" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #1e90ff;" text="Limite Disponivel" GridPane.rowIndex="4" />
+                        <Label fx:id="TipoDeContaLabel41" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #1e90ff;" text="Data De Vencimento" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <DatePicker blendMode="COLOR_DODGE" prefHeight="13.0" prefWidth="120.0" promptText="Dia/MêS/Ano" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </DatePicker>
+                        <Label fx:id="TipoDeContaLabel2112" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #1e90ff;" text="CPF">
+                           <GridPane.margin>
+                              <Insets right="36.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </GridPane>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="ConsultarFuncionario" mnemonicParsing="false" text="Consultar Funcionario">
+               <graphic>
+                  <GridPane prefHeight="179.0" prefWidth="269.0" style="-fx-background-color: #1e90ff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="139.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="TipoDeContaLabel21" alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #1e90ff;" text="Tipo De Conta">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                        <TextField fx:id="CodigoFuncionarioField" blendMode="HARD_LIGHT" promptText="Codigo Funcionario" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="9.0" promptText="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="28.0" promptText="Indetificar" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="44.0" promptText="Saldo Em Conta" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="62.0" promptText="Limite Disponivel" style="-fx-font: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="112.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="TipoDeContaLabel211" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="15.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #1e90ff;" text="Cargo" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Label fx:id="NomeLabel2111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="38.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #1e90ff;" text="Nome" GridPane.rowIndex="2" />
+                        <Label fx:id="TipoDeContaLabel21111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #1e90ff;" text="CPF" GridPane.rowIndex="3" />
+                        <Label fx:id="TipoDeContaLabel311" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #1e90ff;" text="Telefone" GridPane.rowIndex="4" />
+                        <Label fx:id="TipoDeContaLabel411" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #1e90ff;" text="Endereço Completo" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <DatePicker blendMode="COLOR_DODGE" prefHeight="13.0" prefWidth="120.0" promptText="Dia/MêS/Ano" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </DatePicker>
+                        <Label fx:id="CodigoLabel21121" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #1e90ff;" text="Código">
+                           <GridPane.margin>
+                              <Insets right="36.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="TipoDeContaLabel4112" alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #1e90ff;" text="Data De Nascimento" GridPane.rowIndex="5" />
+                        <TextField fx:id="EndereçoField" blendMode="HARD_LIGHT" layoutX="140.0" layoutY="62.0" promptText="Endereço" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </GridPane>
+               </graphic>
+            </MenuItem>
+          <MenuItem mnemonicParsing="false" text="Consultar Cliente">
+               <graphic>
+                  <GridPane prefHeight="179.0" prefWidth="269.0" style="-fx-background-color: #1e90ff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="139.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="9.0" promptText="Nome" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="28.0" promptText="Indetificar" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="44.0" promptText="Saldo Em Conta" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="62.0" promptText="Limite Disponivel" style="-fx-font: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField blendMode="HARD_LIGHT" layoutX="129.0" layoutY="112.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <Label fx:id="TipoDeContaLabel2111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="15.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #1e90ff;" text="Nome" textFill="WHITE" />
+                        <Label fx:id="TipoDeContaLabel21111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="38.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #1e90ff;" text="CPF" GridPane.rowIndex="1" />
+                        <Label fx:id="TipoDeContaLabel211111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #1e90ff;" text="Telefone" GridPane.rowIndex="2" />
+                        <Label fx:id="TipoDeContaLabel3111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #1e90ff;" text="Endereço Completo" GridPane.rowIndex="3" />
+                        <Label fx:id="TipoDeContaLabel4111" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="16.0" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #1e90ff;" text="Data De Nascimento" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <DatePicker blendMode="COLOR_DODGE" prefHeight="13.0" prefWidth="120.0" promptText="Dia/MêS/Ano" style="-fx-background-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </DatePicker>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </GridPane>
+               </graphic>
+            </MenuItem>
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MenuButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="447.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Downloads/SceneBuilder_TrabalhoLAB/DathVader.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="VoltarMenuButton" layoutX="54.0" layoutY="466.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Voltar" />
+      <Icon content="ARROW_BACK" layoutX="28.0" layoutY="468.0" />
+   </children>
+</AnchorPane>

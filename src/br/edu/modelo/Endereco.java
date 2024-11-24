@@ -1,12 +1,21 @@
-package br.edu.controle;
+package br.edu.modelo;
 
 public class Endereco{
+    private int idEndereco;
     private String cep;
     private String logradouro;
     private int numeroCasa;
     private String bairro;
     private String cidade;
     private String estado;
+
+    public int getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(int idEndereco) {
+        this.idEndereco = idEndereco;
+    }
 
     public String getLogradouro() {
         return logradouro;

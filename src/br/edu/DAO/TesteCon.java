@@ -1,4 +1,4 @@
-package br.edu.entidade;
+package br.edu.DAO;
 
 import java.sql.SQLException;
 

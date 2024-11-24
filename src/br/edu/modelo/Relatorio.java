@@ -1,4 +1,4 @@
-package br.edu.controle;
+package br.edu.modelo;
 
 import java.time.LocalDate;
 import java.util.List;

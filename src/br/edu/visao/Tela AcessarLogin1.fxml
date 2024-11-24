@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="282.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Downloads/SceneBuilder_TrabalhoLAB/StarWarSceneBuilder.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="334.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Downloads/SceneBuilder_TrabalhoLAB/DathVader.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="InsiraSenha" depthTest="ENABLE" layoutX="333.0" layoutY="244.0" prefHeight="26.0" prefWidth="152.0" promptText="Insira Senha" />
+      <Button fx:id="AreaFuncionario" layoutX="294.0" layoutY="294.0" mnemonicParsing="false" text="Area Funcionario">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="AlterarUsuario" fx:id="AcessarConta" layoutX="430.0" layoutY="294.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="Acessar Conta">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="VANCOMALVADER" layoutX="-1.0" layoutY="278.0" prefHeight="121.0" prefWidth="259.0" text=" BANCO MALVADER" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Colonna MT" size="28.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <TextField id="NomeUsuario" fx:id="NomeUsuario" floatText="Nome Usuario" layoutX="335.0" layoutY="190.0" maxLength="30" prefHeight="43.0" prefWidth="152.0" style="-fx-shape: black;" styleClass="White" />
+      <Button fx:id="Fechar" layoutX="383.0" layoutY="350.0" mnemonicParsing="false" text="Fechar" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

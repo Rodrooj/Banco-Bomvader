@@ -1,10 +1,16 @@
-package br.edu.controle;
+package br.edu.modelo;
 
 import java.time.LocalDate;
 
 public class ContaCorrente extends Conta{
     private double limite;
     private LocalDate dataVencimento;
+
+    public ContaCorrente(int numero, String agencia, double saldo, double limite, LocalDate dataVencimento) {
+        super(numero, agencia, saldo);
+        this.limite = limite;
+        this.dataVencimento = dataVencimento;
+    }
 
     public double getLimite() {
         return limite;
@@ -23,6 +29,6 @@ public class ContaCorrente extends Conta{
     }
 
     double consultarLimite(){
-        return 0;
+        return limite;
     }
 }

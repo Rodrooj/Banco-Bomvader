@@ -1,7 +1,12 @@
-package br.edu.controle;
+package br.edu.modelo;
 
 public class ContaPoupanca extends Conta{
     private double taxaRendimento;
+
+    public ContaPoupanca(int numero, String agencia, double saldo, double taxaRendimento) {
+        super(numero, agencia, saldo);
+        this.taxaRendimento = taxaRendimento;
+    }
 
     public double getTaxaRendimento() {
         return taxaRendimento;
@@ -12,6 +17,6 @@ public class ContaPoupanca extends Conta{
     }
 
     double calculaRendimento(){
-        return 0;
+        return getSaldo() * taxaRendimento;
     }
 }
