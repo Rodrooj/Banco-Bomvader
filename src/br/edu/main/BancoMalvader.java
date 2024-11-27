@@ -1,13 +1,10 @@
 package br.edu.main;
 
+import br.edu.visao.TelaBoasVindas;
+
 public class BancoMalvader {
-    private String nome;
-
-    public static void main(String[] args) {
-
-    }
-
-    void iniciarSistema(){
-
+    static void iniciarSistema(){
+        TelaBoasVindas tela = new TelaBoasVindas();
+        tela.setVisible(true);
     }
 }

@@ -3,30 +3,31 @@ package br.edu.modelo;
 import java.time.LocalDate;
 
 public abstract class Usuario {
-    private int id;
+    private int idUsuario;
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
     private String telefone;
-    private Endereco endereco = new Endereco();
+    private String tipoUsuario;
+    private Endereco endereco;
     private String senha;
 
-    public Usuario(int id, String nome, String cpf, LocalDate dataNascimento, String telefone, Endereco endereco, String senha) {
-        this.id = id;
+    public Usuario(int idUsuario, String nome, String cpf, LocalDate dataNascimento, String telefone, String tipoUsuario, String senha) {
+        this.idUsuario = idUsuario;
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.tipoUsuario = tipoUsuario;
         this.senha = senha;
     }
 
-    public int getId() {
-        return id;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNome() {
@@ -61,6 +62,14 @@ public abstract class Usuario {
         this.telefone = telefone;
     }
 
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
     public Endereco getEndereco() {
         return endereco;
     }
@@ -75,22 +84,5 @@ public abstract class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    boolean login(String senha){
-        return this.senha.equals(senha);
-    }
-
-    boolean logout(){
-        return false;
-    }
-
-    public String consultarDados(){
-        return  "\nID: " + id +
-                "\nNome: " + nome +
-                "\nCPF: " + cpf +
-                "\nData de Nascimento: " + dataNascimento +
-                "\nTelefone: " + telefone +
-                "\nEndereço: " + endereco;
     }
 }

@@ -6,10 +6,10 @@ public class ContaCorrente extends Conta{
     private double limite;
     private LocalDate dataVencimento;
 
-    public ContaCorrente(int numero, String agencia, double saldo, double limite, LocalDate dataVencimento) {
-        super(numero, agencia, saldo);
-        this.limite = limite;
+    public ContaCorrente(int numero, String agencia, double saldo, Cliente cliente, LocalDate dataVencimento, double limite) {
+        super(numero, agencia, saldo, cliente);
         this.dataVencimento = dataVencimento;
+        this.limite = limite;
     }
 
     public double getLimite() {
@@ -26,9 +26,5 @@ public class ContaCorrente extends Conta{
 
     public void setDataVencimento(LocalDate dataVencimento) {
         this.dataVencimento = dataVencimento;
-    }
-
-    double consultarLimite(){
-        return limite;
     }
 }
