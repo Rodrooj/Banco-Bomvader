@@ -20,9 +20,9 @@ public class ConexaoBanco {
         String user = System.getenv(ENV_USER);
         String password = System.getenv(ENV_PASSWORD);
 
-        if (url == null || url.isBlank()
-                || user == null || user.isBlank()
-                || password == null || password.isBlank()) {
+        if (url == null || url.trim().isEmpty()
+                || user == null || user.trim().isEmpty()
+                || password == null || password.trim().isEmpty()) {
             throw new SQLException(
                     "Configure BOMVADER_DB_URL, BOMVADER_DB_USER e BOMVADER_DB_PASSWORD antes de conectar."
             );
