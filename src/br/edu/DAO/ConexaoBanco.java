@@ -1,36 +1,97 @@
 package br.edu.DAO;
 
-import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ConexaoBanco {
-    Connection con;// criação do objeto conexao
-    PreparedStatement pst;//criação do objeto preparação de ambiente
-    ResultSet rs;// criação do objeto que recebe resultados
+    Connection con;
+    PreparedStatement pst;
+    ResultSet rs;
 
+    private static final String ENV_URL = "BOMVADER_DB_URL";
+    private static final String ENV_USER = "BOMVADER_DB_USER";
+    private static final String ENV_PASSWORD = "BOMVADER_DB_PASSWORD";
 
-    public void abrirBanco() throws SQLException {// criando metodo para acessar o banco
+    public void abrirBanco() throws SQLException {
+        String url = System.getenv(ENV_URL);
+        String user = System.getenv(ENV_USER);
+        String password = System.getenv(ENV_PASSWORD);
+
+        if (url == null || url.isBlank()
+                || user == null || user.isBlank()
+                || password == null || password.isBlank()) {
+            throw new SQLException(
+                    "Configure BOMVADER_DB_URL, BOMVADER_DB_USER e BOMVADER_DB_PASSWORD antes de conectar."
+            );
+        }
+
         try {
-            Class.forName("com.mysql.jdbc.Driver");//classe para utilização do arquivo com configurções do serivdor mysql
-            String url = "jdbc:mysql://localhost/banco_bomvader";// drive servidor e banco de dados a serem utilizados e indicação do banco a ser utilizado
-            String user ="root";// usuario do banco de dados
-            String senha ="";//senha do usuario do banco de dados
-            con=(Connection) DriverManager.getConnection(url,user,senha);//metodo que usa os parametros para conectar com o banco
-            System.out.println("Conectado ao banco de dados ");
-        } catch (ClassNotFoundException ex) {//tratamento de erro de drive
-            System.out.println("Classe não encontrada, adicione o driver nas bibliotecas.");
-            Logger.getLogger(ConexaoBanco.class.getName()).log(Level.SEVERE, null, ex);
-        } catch(SQLException e) {//tratamento de erro de SQL
-            System.out.println(e);
-            throw new RuntimeException(e);
+            // Mantido o driver compatível com a biblioteca JDBC atualmente versionada.
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new SQLException(
+                    "Driver JDBC do MySQL não encontrado. Verifique se a biblioteca está no classpath."
+            );
+        }
+
+        try {
+            con = DriverManager.getConnection(url, user, password);
+            System.out.println("Conexão com o banco de dados estabelecida.");
+        } catch (SQLException e) {
+            // Registra apenas metadados não sensíveis; não imprime a URL nem as credenciais.
+            System.err.printf(
+                    "Falha na conexão MySQL (SQLState=%s, código=%d).%n",
+                    e.getSQLState(),
+                    e.getErrorCode()
+            );
+            throw new SQLException(
+                    "Não foi possível conectar ao MySQL. Verifique as variáveis BOMVADER_DB_* e a disponibilidade do servidor."
+            );
         }
     }
 
-    public void fecharBanco() throws Exception{//criando metodo que fechao conexão com o banco
-        if (pst!= null) { //limpando os dados de conexão
-            pst.close();//fechando o ambiente de conexão
-            System.out.println("Execuçao da Query fechada\n");
+    public void fecharBanco() throws SQLException {
+        SQLException closeFailure = null;
+
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                closeFailure = e;
+            } finally {
+                rs = null;
+            }
+        }
+
+        if (pst != null) {
+            try {
+                pst.close();
+            } catch (SQLException e) {
+                if (closeFailure == null) {
+                    closeFailure = e;
+                }
+            } finally {
+                pst = null;
+            }
+        }
+
+        if (con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                if (closeFailure == null) {
+                    closeFailure = e;
+                }
+            } finally {
+                con = null;
+            }
+        }
+
+        if (closeFailure != null) {
+            throw new SQLException("Não foi possível fechar todos os recursos JDBC.");
         }
     }
 }
